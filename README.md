@@ -37,19 +37,25 @@ cat 2>> error.txt
     cat <input.txt >/dev/pts/1
     
 **Piping**: Taking std output of 1 command and connecting it to the std input of another command
-
+![Piping](https://github.com/hyhung12/Linux_again/blob/main/piping.PNG)<br>
 **Tee**: Allow use to pass the data to another pipe abnd also keep the data in a file<br>
-![Tee](https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Tee.svg/400px-Tee.svg.png)<br>
-cat <input.txt  | tee  output2.txt     >>   output.txt<br>
-**xargs**: convert std input into command line argument<br>
-    date | echo -> not work<br>
-    date | xargs echo -> work<br>
-**ls**: -F: hightlight folders<br>
+![Tee](https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Tee.svg/400px-Tee.svg.png)
+
+    cat <input.txt  | tee  output2.txt    >>   output.txt
+**xargs**: convert std input into command line argument
+
+    date | echo -> not work
+    date | xargs echo -> work
+    
+**ls**: -F: hightlight folders<br><br>
 **cd**: cd . or cd ..
+
 ### Wildcards:
-ls * : list everything in the folderso **OR** *txt: everything with txt extension
-?txt: everything ends with txt but have only 1 letter or number before it
-output[1234].txt **OR** output[1-9].txt **OR** output[1-9][1-9][a-z].txt: everything in the square bracket
+ls * : list everything in the folders **OR**  ls *.txt: everything with txt extension<br><br>
+?txt: everything ends with txt but have only 1 space before it<br><br>
+Everything in the square bracket
+
+    output[1234].txt || output[1-9].txt || output[1-9][1-9][a-z].txt
 
 ### Creating Files  Folders
 Creating at current directory: 
@@ -69,5 +75,6 @@ Creating at different directory:
     mkdir {jan,feb,mar,apr}_{2017..2019}
     touch {jan,feb,mar,apr}_{2017..2019}/file{1..100}
     ls {jan,feb,mar,apr}_{2017..2019}
+    
 ### Deleting Files  Folders
 

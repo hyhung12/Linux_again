@@ -66,7 +66,7 @@ Everything in the square bracket
 
     output[1234].txt || output[1-9].txt || output[1-9][1-9][a-z].txt
 
-### **Creating Files  Folders**
+### **Creating Files/Folders**
 
     touch file1 -> Creating at current directory
     touch Documents/file1 -> Creating at different directory
@@ -81,11 +81,18 @@ Everything in the square bracket
     touch {jan,feb,mar,apr}_{2017..2019}/file{1..100}
     ls {jan,feb,mar,apr}_{2017..2019}
     
-### **Deleting Files Folders**
+### **Deleting Files/Folders**
 
     rm deleteme -> Deleting at current directory
     rm Documents/deleteme -> Deleting at different directory
     rm -r delfolder -> Delete parent and child folder
     rm -ri delfolder -> ask when deleting folders
-    rm delfolder* -> delete only empty folders
+    rm delfolder/* -> delete only empty folders
 
+### *Copying Files/Folders**
+
+    cp old_file new_file -> Copy & paste file
+    cp -r old_fd new_fd -> Copy & paste folder
+    cp file1 file2 Documents/ -> Copy & paste files to different directory
+    cp Documents/* . -> Copy everything in 1 folder to current directory
+    

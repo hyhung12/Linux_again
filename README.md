@@ -86,4 +86,6 @@ Everything in the square bracket
     rm deleteme -> Deleting at current directory
     rm Documents/deleteme -> Deleting at different directory
     rm -r delfolder -> Delete parent and child folder
+    rm -ri delfolder -> ask when deleting folders
+    rm delfolder* -> delete only empty folders
 

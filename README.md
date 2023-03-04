@@ -50,7 +50,7 @@ cat 2>> error.txt
 **ls**: -F: hightlight folders<br><br>
 **cd**: cd . or cd ..
 
-### Wildcards:
+### Wildcards * ? [] {}:
 ls * : list everything in the folders **OR**  ls *.txt: everything with txt extension<br><br>
 ?txt: everything ends with txt but have only 1 space before it<br><br>
 Everything in the square bracket

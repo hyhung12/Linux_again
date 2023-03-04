@@ -120,3 +120,12 @@ Everything in the square bracket
     find . -size +100k
     find . -size +100k -o -size -5M (
     find . -size +100k | wc -l -> count number of lines
+    
+### **cat command**
+
+    cat file[1-5].txt > output.txt  -> Stick files together
+
+### **Viewing commands**
+
+    tac file1.txt -> read content reversely
+    rev, head, tail

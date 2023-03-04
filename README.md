@@ -102,4 +102,21 @@ Everything in the square bracket
     mv folder1/* newFolder ||  mv folder1/* .   -> Move everything in folder 1 to new folder
     mv folder1 ~/Desktop/folder   -> Move and rename folder
     
-**Find command**: List all files and folders but can be very slow(does not search from database ≠ locate)
+### **Find command**: List all files and folders but can be very slow(does not search from database ≠ locate)
+ 
+ **Search by depth**
+ 
+    find . -maxdepth 1 -> Display everything in current diretory
+    find . -maxdepth 2 -> One level down
+    
+**Search by name and type**
+
+    find . -type f -> Only show files | -type d -> Only folders
+    find . -name "5.txt" -> search all locations that have the wanted file (wildcards work but not brace expansion)
+    find . -iname -> ignore case-sensitive
+    
+ **Search by size**
+ 
+    find . -size +100k
+    find . -size +100k -o -size -5M (
+    find . -size +100k | wc -l -> count number of lines

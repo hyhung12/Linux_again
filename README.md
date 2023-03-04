@@ -24,15 +24,18 @@ Ctrl+Alt+T: Open new terminal
 + Std input:0, std output:1, std error:2<br>
 
 ### **Redirection**:
-cat 1> output.txt : std output is redirected to output.txt<br><br>
-'>' truncation: remove old text and replace with new text<br><br>
-'>>' appending<br><br>
-cat 2>> error.txt
-'<': input redirection
-**Example**: 
+
+    cat 1> output.txt -> std output is redirected to output.txt
+    '>' truncation -> remove old text and replace with new text
+    '>>' -> appending
+    cat 2>> error.txt
+    '<' -> input redirection
+    
+**Example**:
+
     cat < input.txt > output.txt 2> error.txt
 
-- Everything in Linux is treated as a file even the terminal
+Everything in Linux is treated as a file even the terminal
 
     cat <input.txt >/dev/pts/1
     
@@ -47,12 +50,18 @@ cat 2>> error.txt
     date | echo -> not work
     date | xargs echo -> work
     
-**ls**: -F: hightlight folders<br><br>
-**cd**: cd . or cd ..
+**Navigate file system**
+
+    pwd
+    ls -F: hightlight folders
+    cd . or cd ..
 
 ### **Wildcards * ? [] {}**:
-ls * : list everything in the folders **OR**  ls *.txt: everything with txt extension<br><br>
-?txt: everything ends with txt but have only 1 space before it<br><br>
+
+    ls * -> list everything in the folders
+    ls *.txt -> everything with txt extension
+    ?txt -> everything ends with txt but have only 1 space before it
+    
 Everything in the square bracket
 
     output[1234].txt || output[1-9].txt || output[1-9][1-9][a-z].txt
@@ -76,4 +85,5 @@ Everything in the square bracket
 
     rm deleteme -> Deleting at current directory
     rm Documents/deleteme -> Deleting at different directory
+    rm -r delfolder -> Delete parent and child folder
 

@@ -89,10 +89,17 @@ Everything in the square bracket
     rm -ri delfolder -> ask when deleting folders
     rm delfolder/* -> delete only empty folders
 
-### *Copying Files/Folders**
+### **Copying Files/Folders**
 
     cp old_file new_file -> Copy & paste file
     cp -r old_fd new_fd -> Copy & paste folder
     cp file1 file2 Documents/ -> Copy & paste files to different directory
     cp Documents/* . -> Copy everything in 1 folder to current directory
     
+### **Removing + Renaming Files/Folders** (does not require -r)
+
+    mv old_name.txt new_name.txt || mv old_fd new_fd
+    mv folder1/* newFolder ||  mv folder1/* .   -> Move everything in folder 1 to new folder
+    mv folder1 ~/Desktop/folder   -> Move and rename folder
+    
+**Find command**: List all files and folders but can be very slow(does not search from database ≠ locate)

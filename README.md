@@ -50,14 +50,14 @@ cat 2>> error.txt
 **ls**: -F: hightlight folders<br><br>
 **cd**: cd . or cd ..
 
-### Wildcards * ? [] {}:
+### **Wildcards * ? [] {}**:
 ls * : list everything in the folders **OR**  ls *.txt: everything with txt extension<br><br>
 ?txt: everything ends with txt but have only 1 space before it<br><br>
 Everything in the square bracket
 
     output[1234].txt || output[1-9].txt || output[1-9][1-9][a-z].txt
 
-### Creating Files  Folders
+### **Creating Files  Folders**
 Creating at current directory: 
 
     touch file1
@@ -76,5 +76,5 @@ Creating at different directory:
     touch {jan,feb,mar,apr}_{2017..2019}/file{1..100}
     ls {jan,feb,mar,apr}_{2017..2019}
     
-### Deleting Files  Folders
+### **Deleting Files Folders**
 

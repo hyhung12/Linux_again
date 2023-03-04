@@ -58,13 +58,9 @@ Everything in the square bracket
     output[1234].txt || output[1-9].txt || output[1-9][1-9][a-z].txt
 
 ### **Creating Files  Folders**
-Creating at current directory: 
 
-    touch file1
-    
-Creating at different directory:
-
-    touch Documents/file1
+    touch file1 -> Creating at current directory
+    touch Documents/file1 -> Creating at different directory
     
 **mkdir** for folders
 
@@ -77,4 +73,7 @@ Creating at different directory:
     ls {jan,feb,mar,apr}_{2017..2019}
     
 ### **Deleting Files Folders**
+
+    rm deleteme -> Deleting at current directory
+    rm Documents/deleteme -> Deleting at different directory
 

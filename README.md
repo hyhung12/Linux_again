@@ -115,7 +115,7 @@ Everything in the square bracket
     find . -name "5.txt" -> search all locations that have the wanted file (wildcards work but not brace expansion)
     find . -iname -> ignore case-sensitive
     
- **Search by size**
+**Search by size**
  
     find . -size +100k
     find . -size +100k -o -size -5M (
@@ -128,4 +128,48 @@ Everything in the square bracket
 ### **Viewing commands**
 
     tac file1.txt -> read content reversely
-    rev, head, tail
+    rev, head, tail, less
+    
+### **Archive**
+Tarball – a bag containing all files and it can be compressed using compression algorithm
+
+    tar -cvf (create, verbose: give feedback, f: accept files) ourarchive.tar file1.txt file2.txt
+    tar -tf archive.tar (test label: check inside tarball, -f is needed for file) 
+    tar -xvf (-x to extract tarball, extract does not delete the tarball, tarball is like a reused bag)
+
+### **Compress**
+
+    gzip: faster but lest compression power
+    bzip2: compress smaller file but requires more power (only good for large files like img, video)
+    bzip2 / Gzip ourarchive.tar to compress tarbal
+    bunzip2 / Gunzip ourarchive.tar.gz to get back tarball file
+
+### **Zip/Archive + Compress in 1 command**
+
+    zip ourzipfile.zip file[1..4].txt -> zip does archive and compression in 1 step
+    tar -cvzf ourarchive.tar.gz file[1..4].txt  -> Archive + compression in 1 step
+    tar -xvzf ourarchive.tar.gz  -> Extract gzip file to tarball
+
+### **Apt: Advanced package tool**
+
+    apt-cache search “search term” ->  search for related packages
+    apt-cache show package_name | less -> search info about package
+
+### **Update + upgrade packages**
+
+    sudo apt-get update -> download the most updated version of the package list
+    sudo apt-get upgrade -> upgrade all the packages to the newest version
+    
+### **Install new package**
+
+    sudo apt-get install package_name
+    
+### **Remove package**
+
+    sudo apt-get remove package_name -> don’t do this, it will leave config file in the system
+    sudo apt-get purge package_name -> remove package + config file
+    sudo apt-get autoremove -> remove unwanted dependencies
+    cd /var/cache/apt/archives
+    sudo apt-get clean -> remove all archives of packages
+    sudo apt-get autoclean -> delete packages archives no longer accessible
+
